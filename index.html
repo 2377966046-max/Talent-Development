@@ -1387,6 +1387,379 @@ input[type=range]::-moz-range-thumb{
   .avatar-xl{width:60px;height:60px;font-size:21px;}
 }
 
+/* =========================================================
+   浅蓝主题 · 南航蓝白
+   只调整视觉层，不改变任何交互与数据逻辑
+   ========================================================= */
+:root{
+  --paper:#F9FCFF;
+  --cream:#EDF6FC;
+  --cream-deep:#E2F0FA;
+}
+
+html{background:#EAF4FC;}
+body{
+  background:
+    radial-gradient(760px 420px at 6% -6%, rgba(151,205,240,.34), transparent 66%),
+    radial-gradient(620px 400px at 100% 4%, rgba(113,185,229,.18), transparent 62%),
+    radial-gradient(700px 420px at 60% 100%, rgba(190,226,247,.28), transparent 70%),
+    linear-gradient(180deg,#F3FAFE 0%,#EBF5FC 46%,#F4FAFE 100%);
+  background-attachment:fixed;
+}
+
+/* ---------- 卡片：带一点蓝调的纸面，而不是纯白 ---------- */
+.card,
+.insight-card,
+.course-card,
+.mentor-card,
+.question-card,
+.plan-panel{
+  background:linear-gradient(180deg,#FBFDFF 0%,#F5FAFE 100%);
+  border-color:rgba(13,92,142,.12);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.85), var(--shadow-card);
+}
+.insight-card,
+.course-card,
+.mentor-card{
+  position:relative;
+  overflow:hidden;
+}
+.insight-card::after,
+.course-card::after,
+.mentor-card::after{
+  content:"";position:absolute;right:-30px;top:-30px;width:96px;height:96px;border-radius:50%;
+  background:radial-gradient(circle,rgba(46,159,216,.13),transparent 66%);
+  opacity:0;transition:opacity .25s ease;pointer-events:none;
+}
+.insight-card:hover::after,
+.course-card:hover::after,
+.mentor-card:hover::after{opacity:1;}
+.course-card:hover,
+.mentor-card:hover{border-color:rgba(13,106,159,.24);}
+
+/* ---------- 顶栏 / 内容头部的小设计 ---------- */
+.topbar{background:rgba(240,248,253,.86);}
+.topbar::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(46,159,216,.42) 28%,rgba(11,92,142,.24) 62%,transparent);
+  pointer-events:none;
+}
+.eyebrow{display:flex;align-items:center;gap:8px;}
+.eyebrow::before{
+  content:"";width:18px;height:2px;border-radius:2px;flex:none;
+  background:linear-gradient(90deg,#0B5C8E,#7EC8F2);
+}
+.question-card{position:relative;overflow:hidden;}
+.question-card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,#0B5C8E,#7EC8F2);opacity:.3;
+}
+
+/* ---------- 侧栏：浅蓝航站楼 ---------- */
+.sidebar{
+  background:
+    radial-gradient(420px 280px at 18% 0%, rgba(255,255,255,.95), transparent 72%),
+    linear-gradient(180deg,#EDF7FE 0%,#DCEFFC 56%,#CBE5F7 100%);
+  color:#153E5E;
+  border-right:1px solid rgba(13,92,142,.12);
+  box-shadow:12px 0 34px -30px rgba(8,52,87,.45);
+}
+.sidebar::after{
+  background-image:radial-gradient(circle at 1px 1px, rgba(13,92,142,.08) 1px, transparent 0);
+  opacity:.35;
+}
+.brand-mark{
+  background:rgba(255,255,255,.7);
+  border-color:rgba(13,92,142,.14);
+  box-shadow:0 6px 14px -12px rgba(8,52,87,.45);
+}
+.brand-name{color:#0B3D5C;}
+.brand-sub{color:rgba(20,60,90,.55);}
+.nav-label{color:rgba(20,60,90,.45);}
+.nav-item{color:rgba(20,60,90,.72);}
+.nav-item:hover{background:rgba(255,255,255,.52);color:#0B3D5C;}
+.nav-item.is-active{
+  background:rgba(255,255,255,.8);
+  color:#0B4E79;
+  box-shadow:0 4px 12px -10px rgba(8,52,87,.55);
+}
+.nav-item.is-active::before{
+  content:"";position:absolute;left:3px;top:50%;transform:translateY(-50%);
+  width:3px;height:18px;border-radius:2px;
+  background:linear-gradient(180deg,#0B5C8E,#7EC8F2);
+}
+.nav-item.is-active .ico{color:#0E6A9F;}
+.nav-dot{background:#0E6A9F;box-shadow:none;}
+.nav-badge{background:rgba(14,106,159,.12);color:#0B5C8E;}
+.coach-mini{
+  background:rgba(255,255,255,.55);
+  border-color:rgba(13,92,142,.14);
+  color:#123C5E;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+}
+.coach-mini:hover{border-color:rgba(13,106,159,.3);}
+.coach-mini p{color:rgba(20,60,90,.6);}
+.coach-mini-link{color:#0B6EA8;}
+.spark-ico{background:rgba(14,106,159,.12);color:#0E6A9F;}
+.live-dot{background:#0E8BC2;box-shadow:0 0 0 3px rgba(14,139,194,.14);}
+.sidebar-user{border-top-color:rgba(13,92,142,.12);}
+.sidebar-user-text strong{color:#0B3D5C;}
+.sidebar-user-text span{color:rgba(20,60,90,.55);}
+.icon-btn-dark{color:rgba(20,60,90,.6);}
+.icon-btn-dark:hover{background:rgba(255,255,255,.5);}
+.avatar{
+  color:#0B3D5C;
+  background:linear-gradient(145deg,#BFE4F8,#8FC3E2);
+  border-color:rgba(255,255,255,.75);
+}
+.sidebar-plane{color:rgba(13,106,159,.08);}
+
+/* ---------- 首页 Hero：从深蓝夜空改成浅蓝云层 ---------- */
+.hero{
+  background:
+    radial-gradient(120% 180% at 92% 0%, rgba(255,255,255,.9) 0%, rgba(255,255,255,.4) 22%, transparent 55%),
+    radial-gradient(80% 120% at 8% 0%, rgba(255,255,255,.72), transparent 58%),
+    linear-gradient(135deg,#E9F6FF 0%,#D3EBFB 48%,#BFDFF5 100%);
+  color:var(--ink);
+  border:1px solid rgba(13,106,159,.12);
+  box-shadow:0 26px 54px -40px rgba(8,52,87,.45);
+}
+.hero::before{
+  background-image:radial-gradient(circle at 1px 1px, rgba(13,92,142,.08) 1px, transparent 0);
+  opacity:.5;
+}
+.hero::after{
+  content:"";position:absolute;left:-6%;right:-6%;bottom:-34px;height:110px;z-index:0;
+  background:
+    radial-gradient(70px 40px at 12% 55%, rgba(255,255,255,.8), transparent 70%),
+    radial-gradient(96px 50px at 34% 48%, rgba(255,255,255,.66), transparent 72%),
+    radial-gradient(84px 46px at 62% 58%, rgba(255,255,255,.74), transparent 70%),
+    radial-gradient(64px 38px at 88% 46%, rgba(255,255,255,.6), transparent 72%);
+  pointer-events:none;
+}
+.hero-glow{background:radial-gradient(circle,rgba(255,255,255,.9),transparent 64%);}
+.hero h2{color:#0B3D5C;}
+.hero-copy>p{color:rgba(20,60,90,.7);}
+.pill-light{
+  background:rgba(255,255,255,.68);
+  border-color:rgba(13,106,159,.22);
+  color:#0B5C8E;
+}
+.pill-dot{background:#0B6EA8;}
+.hero .btn.light{
+  background:#0B5C8E;color:#F4FAFF;
+  box-shadow:0 12px 24px -16px rgba(8,52,87,.85);
+}
+.hero .btn.light:hover{background:#0E6A9F;box-shadow:0 16px 28px -16px rgba(8,52,87,.8);}
+.hero .btn.ghost-light{
+  border-color:rgba(11,92,142,.32);color:#0B5C8E;
+}
+.hero .btn.ghost-light:hover{background:rgba(255,255,255,.5);}
+.hero-flight > path{stroke:rgba(13,106,159,.4);}
+.hero-flight g path{fill:#0E6A9F;}
+.hero-arcs circle{stroke:rgba(13,106,159,.16);}
+.hero-arcs circle:nth-child(2){stroke:rgba(13,106,159,.12);}
+.hero-arcs circle:nth-child(3){stroke:rgba(13,106,159,.08);}
+.hero-arcs circle:nth-child(4){stroke:rgba(13,106,159,.05);}
+.ring-label strong{color:#0B3D5C;}
+.ring-label span{color:rgba(20,60,90,.55);}
+.ring-foot{color:rgba(20,60,90,.6);}
+.ring-foot .up{color:#0B6EA8;}
+
+/* ---------- 测评介绍卡 ---------- */
+.assess-hero{
+  background:
+    radial-gradient(120% 140% at 80% 10%, rgba(255,255,255,.9), transparent 62%),
+    linear-gradient(160deg,#EAF6FF 0%,#D4EBFB 100%);
+  border-color:rgba(13,106,159,.12);
+  color:var(--ink);
+}
+.orbit-ring{border-color:rgba(13,106,159,.18);}
+.ring-2{border-color:rgba(13,106,159,.13);}
+.ring-3{border-color:rgba(13,106,159,.08);}
+.orbit-core{
+  background:radial-gradient(circle at 35% 28%,#FFFFFF,#D3EAF9 72%);
+  color:#0B3D5C;
+  box-shadow:0 0 0 9px rgba(126,200,242,.08),0 18px 34px -20px rgba(8,52,87,.35);
+}
+.orbit-chip{
+  background:rgba(255,255,255,.68);
+  border-color:rgba(13,106,159,.15);
+  color:#1B4B6B;
+}
+.orbit-chip i{background:#0B6EA8;}
+.assess-hero-foot{border-top-color:rgba(13,106,159,.12);}
+.assess-hero-foot strong{color:#0B3D5C;}
+.assess-hero-foot span{color:rgba(20,60,90,.55);}
+
+/* ---------- 导师匹配 Hero ---------- */
+.match-hero{
+  background:
+    radial-gradient(90% 160% at 95% 0%, rgba(255,255,255,.92), transparent 56%),
+    linear-gradient(135deg,#E8F6FF 0%,#D1EAFB 55%,#C2E0F5 100%);
+  color:var(--ink);
+  border:1px solid rgba(13,106,159,.12);
+  box-shadow:0 24px 50px -40px rgba(8,52,87,.42);
+}
+.match-hero::after{
+  content:"";position:absolute;left:-6%;right:-6%;bottom:-34px;height:104px;
+  background:
+    radial-gradient(70px 40px at 14% 55%, rgba(255,255,255,.78), transparent 70%),
+    radial-gradient(90px 48px at 42% 48%, rgba(255,255,255,.62), transparent 72%),
+    radial-gradient(80px 44px at 72% 58%, rgba(255,255,255,.72), transparent 70%);
+  pointer-events:none;
+}
+.match-hero h2{color:#0B3D5C;}
+.match-hero p{color:rgba(20,60,90,.68);}
+.match-hero > *{position:relative;z-index:2;}
+.factor{
+  background:rgba(255,255,255,.62);
+  border-color:rgba(13,106,159,.14);
+}
+.factor strong{color:#0B5C8E;}
+.factor span{color:rgba(20,60,90,.58);}
+
+/* ---------- 成长档案头部 ---------- */
+.profile-card{
+  background:
+    radial-gradient(100% 180% at 88% 0%, rgba(255,255,255,.9) 0%, transparent 55%),
+    linear-gradient(120deg,#E7F6FF 0%,#D1EAFB 55%,#C4E1F6 100%);
+  color:var(--ink);
+  border:1px solid rgba(13,106,159,.12);
+  box-shadow:0 26px 50px -40px rgba(8,52,87,.45);
+}
+.profile-glow{background:radial-gradient(circle,rgba(255,255,255,.75),transparent 65%);}
+.profile-name-row h2{color:#0B3D5C;}
+.profile-id>p{color:rgba(20,60,90,.66);}
+.profile-meta{color:rgba(20,60,90,.52);}
+.profile-stats strong{color:#0B3D5C;}
+.profile-stats span{color:rgba(20,60,90,.55);}
+
+/* ---------- 演示模式浮层 ---------- */
+.demo-panel{
+  background:linear-gradient(160deg,#EAF7FF 0%,#D8EDFB 70%,#CFE7F8 100%);
+  color:var(--ink);
+  border-color:rgba(13,106,159,.22);
+  box-shadow:0 30px 70px -34px rgba(8,52,87,.5);
+}
+.demo-badge{background:rgba(14,106,159,.12);color:#0B5C8E;}
+.demo-step{color:rgba(20,60,90,.55);}
+.demo-close{color:rgba(20,60,90,.58);}
+.demo-close:hover{background:rgba(255,255,255,.6);color:#0B3D5C;}
+.demo-progress{background:rgba(13,92,142,.12);}
+.demo-progress i{background:linear-gradient(90deg,#0B5C8E,#5FB8E4);}
+.demo-panel h3{color:#0B3D5C;}
+.demo-panel>p{color:rgba(20,60,90,.7);}
+.demo-hint{color:#0B6EA8;}
+.demo-foot{border-top-color:rgba(13,92,142,.12);}
+.demo-nav{color:rgba(20,60,90,.6);}
+.demo-nav:hover{color:#0B3D5C;}
+.demo-dots i{background:rgba(13,92,142,.18);}
+.demo-dots i.is-active{background:#0B6EA8;}
+.demo-next{background:#0B5C8E;color:#F4FAFF;}
+.demo-next:hover{background:#0E6A9F;}
+
+/* ---------- 提示消息 ---------- */
+.toast{
+  background:rgba(243,250,255,.97);
+  color:#143B5A;
+  border-color:rgba(13,106,159,.24);
+  box-shadow:0 18px 34px -20px rgba(8,52,87,.5);
+}
+.toast i{background:#0E6A9F;}
+
+/* ---------- 首次录入：浅蓝登机牌 ---------- */
+.ob-brand{
+  background:
+    radial-gradient(120% 150% at 18% 0%, rgba(255,255,255,.94) 0%, rgba(255,255,255,.35) 34%, transparent 62%),
+    linear-gradient(160deg,#E9F6FF 0%,#D3EBFB 46%,#C2E0F5 100%);
+  color:var(--ink);
+}
+.ob-brand::after{
+  background-image:radial-gradient(circle at 1px 1px, rgba(13,92,142,.08) 1px, transparent 0);
+  opacity:.6;
+}
+.ob-logo{
+  background:rgba(255,255,255,.7);
+  border-color:rgba(13,106,159,.16);
+  box-shadow:0 8px 18px -14px rgba(8,52,87,.5);
+}
+.ob-brand-name{color:#0B3D5C;}
+.ob-brand-sub{color:rgba(20,60,90,.52);}
+.ob-brand-corp{
+  color:#0B5C8E;
+  background:rgba(255,255,255,.55);
+  border:1px dashed rgba(13,106,159,.26);
+  padding:7px 11px;border-radius:8px;
+}
+.ob-quote p{color:#0B3D5C;}
+.ob-quote span{color:rgba(20,60,90,.62);}
+.ob-points i{
+  color:#0B5C8E;
+  background:rgba(255,255,255,.55);
+  border-color:rgba(13,106,159,.22);
+}
+.ob-points strong{color:#0B3D5C;}
+.ob-points em{color:rgba(20,60,90,.55);}
+.ob-brand-rings span{border-color:rgba(13,106,159,.12);}
+.ob-brand-rings span:nth-child(2){border-color:rgba(13,106,159,.08);}
+.ob-brand-rings span:nth-child(3){border-color:rgba(13,106,159,.05);}
+.ob-plane{color:rgba(13,106,159,.09);}
+
+/* ---------- 生成中的数据过渡页 ---------- */
+.gen{
+  background:
+    radial-gradient(80% 80% at 50% 38%, rgba(255,255,255,.92), transparent 62%),
+    linear-gradient(160deg,#E9F6FF 0%,#CDE7F9 100%);
+  color:var(--ink);
+}
+.gen-orbit span{border-color:rgba(13,106,159,.2);}
+.gen-orbit span:nth-child(2){border-color:rgba(13,106,159,.14);}
+.gen-orbit span:nth-child(3){border-color:rgba(13,106,159,.1);}
+.gen-core{
+  background:radial-gradient(circle at 35% 28%,#FFFFFF,#D3EAF9 72%);
+  color:#0B3D5C;
+  box-shadow:0 0 0 10px rgba(126,200,242,.08);
+}
+.gen h3{color:#0B3D5C;}
+.gen-steps li{color:rgba(20,60,90,.48);}
+.gen-steps li::before{background:rgba(20,60,90,.22);}
+.gen-steps li.is-on{color:#0B3D5C;}
+.gen-steps li.is-on::before{background:#0B6EA8;box-shadow:0 0 8px rgba(11,110,168,.45);}
+.gen-steps li.is-done::before{background:#2E9FD8;}
+
+/* ---------- 输入框与面板：统一成蓝白，不用纯白 ---------- */
+.search,
+.identity-chip,
+.chip,
+.option,
+.time-chip,
+.ob-goal,
+.dim-pick{
+  background:rgba(249,252,255,.82);
+}
+.search:focus-within,
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.survey-text textarea:focus,
+.coach-input input:focus{
+  background:#FBFDFF;
+}
+.coach-drawer,
+.modal,
+.profile-menu,
+.search-pop{
+  background:var(--paper);
+}
+.coach-head{background:linear-gradient(180deg,#F1F9FE,#F9FCFF);}
+
+/* ---------- 小屏幕适配 ---------- */
+@media (max-width:640px){
+  .ob-brand-corp{font-size:9.5px;letter-spacing:.6px;}
+  .hero::after,.match-hero::after{opacity:.7;}
+}
+
 </style>
 </head>
 <body>
@@ -1403,7 +1776,7 @@ input[type=range]::-moz-range-thumb{
           <path d="M4.5 27.5c7.6-6.8 18.2-9.2 31-6" stroke="#9ED3F4" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 3" opacity=".75"/>
           <defs>
             <linearGradient id="obGrad" x1="10" y1="4" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#BFE7FB"/><stop offset="1" stop-color="#4FB3E8"/>
+              <stop stop-color="#7EC8F2"/><stop offset="1" stop-color="#0B6EA8"/>
             </linearGradient>
           </defs>
         </svg>
@@ -1598,7 +1971,7 @@ input[type=range]::-moz-range-thumb{
           <path d="M4.5 27.5c7.6-6.8 18.2-9.2 31-6" stroke="#9ED3F4" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 3" opacity=".75"/>
           <defs>
             <linearGradient id="wingGrad" x1="10" y1="4" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#BFE7FB"/><stop offset="1" stop-color="#4FB3E8"/>
+              <stop stop-color="#7EC8F2"/><stop offset="1" stop-color="#0B6EA8"/>
             </linearGradient>
           </defs>
         </svg>
@@ -1744,7 +2117,7 @@ input[type=range]::-moz-range-thumb{
           <svg class="hero-flight" viewBox="0 0 420 420" aria-hidden="true">
             <path d="M28 342C104 306 116 236 196 206s100-60 158-158" fill="none" stroke="rgba(168,219,250,.42)" stroke-width="1.3" stroke-dasharray="5 7"/>
             <g transform="translate(196 206) rotate(28) scale(.62)">
-              <path d="M0-18c1.8 0 2.8 1.5 2.8 3.6v7.2L13.4 0v3.7L2.8 1.7v5.8l3.9 2.8v2.8L0 11.6l-6.7 1.5v-2.8l3.9-2.8V1.7l-10.6 2V0l10.6-7.2v-7.2c0-2.1 1-3.6 2.8-3.6Z" fill="#BFE6FB"/>
+              <path d="M0-18c1.8 0 2.8 1.5 2.8 3.6v7.2L13.4 0v3.7L2.8 1.7v5.8l3.9 2.8v2.8L0 11.6l-6.7 1.5v-2.8l3.9-2.8V1.7l-10.6 2V0l10.6-7.2v-7.2c0-2.1 1-3.6 2.8-3.6Z" fill="#0E6A9F"/>
             </g>
           </svg>
           <div class="hero-copy">
@@ -2048,6 +2421,8 @@ input[type=range]::-moz-range-thumb{
           <button class="chip" data-filter="lead">领导潜能</button>
           <button class="chip" data-filter="expert">专业深度</button>
           <button class="chip" data-filter="collab">协作影响力</button>
+          <button class="chip" data-filter="innov">创新驱动</button>
+          <button class="chip" data-filter="learn">学习敏锐度</button>
           <button class="chip" data-filter="resil">韧性抗压</button>
         </div>
 
@@ -2539,6 +2914,17 @@ input[type=range]::-moz-range-thumb{
 
   const STORE_KEY = 'yw-evergreen-v3';
 
+  // 默认导师库（南航场景）——首次打开页面即可看到，仍可继续添加自己的导师
+  const DEFAULT_MENTORS = [
+    { id: 'dm-gnx', name: '顾南翔', role: '飞行技术部 · 资深机长 / 技术检查员 · 入职 14 年', dims: ['expert', 'learn'], goal: 'expert', slots: '本月剩余 2 个名额', note: '擅长把复杂的技术决策拆解为可执行的判断框架，适合想在专业深度上扎下根的同学。' },
+    { id: 'dm-zyh', name: '周亦航', role: '客舱服务部 · 客舱经理 / 运营主管 · 入职 11 年', dims: ['lead', 'collab'], goal: 'lead', slots: '本月剩余 3 个名额', note: '带过 4 位年轻主管，重视「用人」而非「做事」，适合想从执行走向带队的同学。' },
+    { id: 'dm-sqh', name: '沈清和', role: '用户研究中心 · 研究总监 · 入职 9 年', dims: ['expert', 'innov'], goal: 'expert', slots: '本月剩余 1 个名额', note: '擅长从海量服务数据里挖出真问题，能帮你补上「从现象到假设」那一步。' },
+    { id: 'dm-lzx', name: '陆之行', role: '人力资源部 · 组织发展顾问 · 入职 12 年', dims: ['collab', 'lead'], goal: 'lead', slots: '本月剩余 2 个名额', note: '在跨部门项目里做过 20 次「冲突调解」，能帮你把「会协调」升级为「会设计协作机制」。' },
+    { id: 'dm-sy', name: '苏漾', role: '创新实验室 · 产品设计负责人 · 入职 7 年', dims: ['innov', 'collab'], goal: 'innov', slots: '本月剩余 4 个名额', note: '手上跑着 3 个从 0 到 1 的项目，愿意带你做一次最小原型验证。' },
+    { id: 'dm-fym', name: '方亦明', role: '安全监察部 · 安全管理专员 · 入职 10 年', dims: ['resil', 'learn'], goal: 'expert', slots: '本月剩余 3 个名额', note: '经历过不止一次复盘，能帮你在高压项目里稳住节奏，识别自己的「情绪开关」。' },
+    { id: 'dm-lzx2', name: '林知夏', role: '雏翼计划发起人 · 青年人才发展 · 入职 6 年', dims: ['learn', 'innov'], goal: 'learn', slots: '本月剩余 2 个名额', note: '就是她发起了雏翼长青这个平台，想聊「如何设计自己的成长节奏」找她最合适。' }
+  ];
+
   const freshState = () => ({
     profile: null,
     self: { learn: 6, collab: 6, lead: 5, expert: 6, innov: 5, resil: 5 },
@@ -2547,7 +2933,7 @@ input[type=range]::-moz-range-thumb{
     answers: Array(QUESTIONS.length).fill(null),
     assessment: null,
     plan: [],
-    mentors: [],
+    mentors: DEFAULT_MENTORS.slice(),
     mentorReqs: [],
     feedback: null,
     trendRange: 'half',
@@ -2566,6 +2952,8 @@ input[type=range]::-moz-range-thumb{
       const data = JSON.parse(raw);
       state = Object.assign(freshState(), data);
       state.demo = { active: false, step: 0 };
+      // 老版本 save 里可能没有 mentors 或 mentors 为空，自动补上默认导师库
+      if (!state.mentors || !state.mentors.length) state.mentors = DEFAULT_MENTORS.slice();
       return !!(state.profile && state.profile.name);
     } catch (e) { return false; }
   }
@@ -2807,11 +3195,11 @@ input[type=range]::-moz-range-thumb{
     svg.innerHTML = `
       <defs>
         <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#7EC8F2"/><stop offset="60%" stop-color="#8FC7EC"/><stop offset="100%" stop-color="#8CBBDD"/>
+          <stop offset="0%" stop-color="#2E9FD8"/><stop offset="60%" stop-color="#0B6EA8"/><stop offset="100%" stop-color="#0B5C8E"/>
         </linearGradient>
       </defs>
-      <circle cx="90" cy="90" r="${r}" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="9"/>
-      <circle cx="90" cy="90" r="${r}" fill="none" stroke="rgba(126,200,242,.10)" stroke-width="1" stroke-dasharray="2 6"/>
+      <circle cx="90" cy="90" r="${r}" fill="none" stroke="rgba(13,92,142,.12)" stroke-width="9"/>
+      <circle cx="90" cy="90" r="${r}" fill="none" stroke="rgba(13,106,159,.14)" stroke-width="1" stroke-dasharray="2 6"/>
       <circle id="ringProgress" cx="90" cy="90" r="${r}" fill="none" stroke="url(#ringGrad)" stroke-width="9"
         stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c}"/>`;
     const progress = $('#ringProgress');
