@@ -40,8 +40,8 @@
   --violet:#4F6FA8;
   --shadow-card:0 1px 2px rgba(8,52,87,.03), 0 18px 40px -30px rgba(8,52,87,.38);
   --shadow-lift:0 18px 36px -22px rgba(8,52,87,.28);
-  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC","Segoe UI",sans-serif;
-  --serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC","Georgia",serif;
+  --sans:"Microsoft YaHei","微软雅黑","PingFang SC","Hiragino Sans GB","Source Han Sans SC","Segoe UI",sans-serif;
+  --serif:"Microsoft YaHei","微软雅黑","PingFang SC","Hiragino Sans GB","Source Han Sans SC","Segoe UI",sans-serif;
   --r-lg:24px;
   --r-md:18px;
   --r-sm:12px;
@@ -98,7 +98,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .brand{display:flex;align-items:center;gap:11px;padding:2px 6px 0;position:relative;z-index:1;}
 .brand-mark{width:38px;height:38px;flex:none;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;}
 .brand-mark svg{width:30px;height:30px;}
-.brand-name{font-family:var(--serif);font-size:19px;letter-spacing:3px;color:#F5FAFF;line-height:1.2;}
+.brand-name{font-family:var(--serif);font-size:34px;font-weight:800;letter-spacing:5px;color:#F5FAFF;line-height:1.1;}
 .brand-sub{font-size:8px;letter-spacing:1.9px;color:rgba(203,227,245,.55);margin-top:4px;}
 
 .nav{margin-top:26px;position:relative;z-index:1;}
@@ -1062,7 +1062,7 @@ input[type=range]::-moz-range-thumb{
   background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
 }
 .ob-logo svg{width:36px;height:36px;}
-.ob-brand-name{font-family:var(--serif);font-size:25px;letter-spacing:5px;color:#F5FAFF;margin-top:18px;}
+.ob-brand-name{font-family:var(--serif);font-size:56px;font-weight:800;letter-spacing:12px;color:#F5FAFF;margin-top:22px;line-height:1.05;}
 .ob-brand-sub{font-size:8.5px;letter-spacing:2.4px;color:rgba(203,227,245,.5);margin-top:6px;}
 .ob-quote{margin-top:56px;}
 .ob-quote p{font-family:var(--serif);font-size:27px;line-height:1.65;letter-spacing:2px;color:#EAF5FF;}
@@ -1296,6 +1296,7 @@ input[type=range]::-moz-range-thumb{
   .ob{display:block;overflow-y:auto;}
   .ob-brand{padding:32px 32px 28px;min-height:auto;}
   .ob-brand-inner{max-width:none;}
+  .ob-brand-name{font-size:44px;letter-spacing:9px;}
   .ob-quote{margin-top:26px;}
   .ob-quote p{font-size:23px;}
   .ob-points{display:none;}
@@ -1304,6 +1305,7 @@ input[type=range]::-moz-range-thumb{
 }
 @media (max-width:640px){
   .ob-brand{padding:26px 22px 22px;}
+  .ob-brand-name{font-size:34px;letter-spacing:6px;margin-top:14px;}
   .ob-quote{margin-top:18px;}
   .ob-quote p{font-size:20px;letter-spacing:1px;}
   .ob-quote span{font-size:11px;margin-top:10px;}
@@ -1786,7 +1788,7 @@ body{
       <p class="ob-brand-corp">中国南方航空 · 青年人才成长平台</p>
 
       <div class="ob-quote">
-        <p>“成长不是感觉，<br>是可以回看的证据。”</p>
+        <p>“成长留下的痕迹，<br>都值得被看见。”</p>
         <span>从录入你自己开始，让平台的数据真正属于你。</span>
       </div>
 
@@ -1867,7 +1869,7 @@ body{
       <!-- Step 2 -->
       <div class="ob-step" id="obStep2" hidden>
         <h1>你的起点，你自己定义</h1>
-        <p class="ob-lead">凭直觉给自己打个分（0–10）。这不是考试，只是让平台知道你从哪里出发。</p>
+        <p class="ob-lead">凭直觉给自己打个分（0–10）。放轻松，这些分数只用来标记你现在的起点。</p>
 
         <div class="ob-self">
           <div class="self-row" data-dim="learn">
@@ -2330,7 +2332,7 @@ body{
         <div class="view-head">
           <div>
             <p class="eyebrow">LEARNING · 个性化培养</p>
-            <h1>不是更多课程，<br>是更对的下一步。</h1>
+            <h1>把力气花在<br>更对的那一步上。</h1>
             <p class="lead" id="trainingLead">AI 结合你的能力数据与岗位路径，从 128 门课程中筛出最值得投入的几门。</p>
           </div>
           <div class="head-actions">
@@ -2404,7 +2406,7 @@ body{
         <div class="match-hero" id="mentorHero">
           <div>
             <span class="pill pill-light"><i class="pill-dot"></i> 匹配模型 · 基于你的测评</span>
-            <h2>匹配度不是相似度。</h2>
+            <h2>选导师，看的是能不能补位。</h2>
             <p>我们更关注：导师能否补上你的能力缺口，是否理解你的成长目标，以及你们的协作节奏是否合拍。</p>
           </div>
           <div class="factor-row">
@@ -2434,7 +2436,7 @@ body{
         <div class="view-head">
           <div>
             <p class="eyebrow">GROWTH ARCHIVE · 可被看见的成长</p>
-            <h1>成长不是感觉，<br>是可以回看的证据。</h1>
+            <h1>成长留下的痕迹，<br>都值得被看见。</h1>
             <p class="lead">测评、课程、导师与反馈自动沉淀，形成一份属于你自己的、持续更新的成长档案。</p>
           </div>
           <div class="head-actions">
@@ -2545,7 +2547,7 @@ body{
               <div class="range-labels"><span>几乎没有</span><span>总是如此</span></div>
             </div>
             <div class="survey-item">
-              <div class="survey-q"><span>团队协作让我感到被支持，而不是被消耗。</span><b data-val="6">6</b></div>
+              <div class="survey-q"><span>在团队里协作时，我能感到自己被支持。</span><b data-val="6">6</b></div>
               <input type="range" min="0" max="10" value="6" data-slider data-key="collab" aria-label="团队协作感受">
               <div class="range-labels"><span>非常消耗</span><span>非常支持</span></div>
             </div>
@@ -2828,11 +2830,11 @@ body{
 
   const ARCHETYPES = {
     learn: { name: '进化型学习者', desc: '你从经验中提取规律的速度，快过大多数人。面对陌生领域，你习惯先建立认知地图，再用小步验证修正判断。' },
-    collab: { name: '连接型协作者', desc: '你擅长把不同角色的人拉到同一张桌子前。你的影响力不来自职位，而来自别人愿意相信你、跟你一起把事做成。' },
-    lead: { name: '潜力型领航者', desc: '你在模糊中不急于找答案，而是先定方向、分责任。你已经开始在没有授权的情况下带动他人，这是领导力最早的信号。' },
+    collab: { name: '连接型协作者', desc: '你擅长把不同角色的人拉到同一张桌子前。比起职位带来的话语权，别人更愿意因为信任你而一起把事做成。' },
+    lead: { name: '潜力型领航者', desc: '面对模糊的局面，你会先定方向、分责任，答案往往在后面慢慢浮现。你已经在没有授权的情况下带动他人，这是领导力最早的信号。' },
     expert: { name: '深耕型专家', desc: '你不满足于「做完」，更在意「做对」。你正在形成自己的方法论，并把经验变成别人可以复用的东西。' },
     innov: { name: '开创型探索者', desc: '你对「本来就该这样」保持怀疑。你愿意用低成本实验去验证新想法，也接受失败带来的信息价值。' },
-    resil: { name: '稳定型长跑者', desc: '你在压力下依然能保持节奏。你不是没有情绪，而是懂得把情绪放在合适的位置，先让事情继续向前。' }
+    resil: { name: '稳定型长跑者', desc: '你在压力下依然能保持节奏。你也会有情绪，只是懂得把它安放在合适的位置，先让事情往前走。' }
   };
 
   const QUESTIONS = [
@@ -2906,7 +2908,7 @@ body{
     { id: 'express', cat: 'lead', catLabel: '领导力', title: '结构化表达与向上沟通', provider: '得到', hours: 3, format: '线上 · 5 节', learners: 3160, dims: ['lead', 'collab'], tags: ['表达', '汇报'], angle: '让结论先行，让建议被听见' },
     { id: 'growth', cat: 'expert', catLabel: '专业精进', title: '用户增长实验设计实战', provider: '三节课', hours: 6, format: '线上 · 8 节', learners: 2340, dims: ['expert', 'learn'], tags: ['增长', '实验'], angle: '把零散经验变成可复用的实验方法' },
     { id: 'method', cat: 'expert', catLabel: '专业精进', title: '方法论萃取：把经验变成资产', provider: '雏翼学院', hours: 4, format: '线上 · 6 节', learners: 870, dims: ['expert', 'learn'], tags: ['复盘', '沉淀'], angle: '从「做过」走向「说得清、教得会」' },
-    { id: 'data', cat: 'digital', catLabel: '数字化', title: '从数据到洞察：业务分析入门', provider: '雏翼学院', hours: 8, format: '线上 · 10 节', learners: 960, dims: ['expert', 'learn'], tags: ['数据', '归因'], angle: '用数据支撑判断，而不是事后解释' },
+    { id: 'data', cat: 'digital', catLabel: '数字化', title: '从数据到洞察：业务分析入门', provider: '雏翼学院', hours: 8, format: '线上 · 10 节', learners: 960, dims: ['expert', 'learn'], tags: ['数据', '归因'], angle: '用数据支撑判断，让结论站得住' },
     { id: 'cross', cat: 'cross', catLabel: '跨界融合', title: '跨部门协作的冲突解法', provider: '组织发展中心', hours: 2.5, format: '直播工作坊', learners: 680, dims: ['collab', 'resil'], tags: ['协作', '冲突'], angle: '把协调升级为机制设计' },
     { id: 'innov', cat: 'cross', catLabel: '跨界融合', title: '创新工作坊：从洞察到原型', provider: '设计思维实验室', hours: 5, format: '线下 · 2 天', learners: 420, dims: ['innov', 'learn'], tags: ['创新', '原型'], angle: '把点子多变成可验证的原型' },
     { id: 'energy', cat: 'well', catLabel: '自我管理', title: '高压周期中的精力与情绪管理', provider: '身心健康中心', hours: 3, format: '线上 · 4 节', learners: 1520, dims: ['resil', 'resil'], tags: ['压力', '精力'], angle: '在高压周期保持稳定输出' }
@@ -2917,13 +2919,24 @@ body{
   // 默认导师库（南航场景）——首次打开页面即可看到，仍可继续添加自己的导师
   const DEFAULT_MENTORS = [
     { id: 'dm-gnx', name: '顾南翔', role: '飞行技术部 · 资深机长 / 技术检查员 · 入职 14 年', dims: ['expert', 'learn'], goal: 'expert', slots: '本月剩余 2 个名额', note: '擅长把复杂的技术决策拆解为可执行的判断框架，适合想在专业深度上扎下根的同学。' },
-    { id: 'dm-zyh', name: '周亦航', role: '客舱服务部 · 客舱经理 / 运营主管 · 入职 11 年', dims: ['lead', 'collab'], goal: 'lead', slots: '本月剩余 3 个名额', note: '带过 4 位年轻主管，重视「用人」而非「做事」，适合想从执行走向带队的同学。' },
+    { id: 'dm-zyh', name: '周亦航', role: '客舱服务部 · 客舱经理 / 运营主管 · 入职 11 年', dims: ['lead', 'collab'], goal: 'lead', slots: '本月剩余 3 个名额', note: '带过 4 位年轻主管，更在意怎么用人，适合想从执行走向带队的同学。' },
     { id: 'dm-sqh', name: '沈清和', role: '用户研究中心 · 研究总监 · 入职 9 年', dims: ['expert', 'innov'], goal: 'expert', slots: '本月剩余 1 个名额', note: '擅长从海量服务数据里挖出真问题，能帮你补上「从现象到假设」那一步。' },
     { id: 'dm-lzx', name: '陆之行', role: '人力资源部 · 组织发展顾问 · 入职 12 年', dims: ['collab', 'lead'], goal: 'lead', slots: '本月剩余 2 个名额', note: '在跨部门项目里做过 20 次「冲突调解」，能帮你把「会协调」升级为「会设计协作机制」。' },
     { id: 'dm-sy', name: '苏漾', role: '创新实验室 · 产品设计负责人 · 入职 7 年', dims: ['innov', 'collab'], goal: 'innov', slots: '本月剩余 4 个名额', note: '手上跑着 3 个从 0 到 1 的项目，愿意带你做一次最小原型验证。' },
     { id: 'dm-fym', name: '方亦明', role: '安全监察部 · 安全管理专员 · 入职 10 年', dims: ['resil', 'learn'], goal: 'expert', slots: '本月剩余 3 个名额', note: '经历过不止一次复盘，能帮你在高压项目里稳住节奏，识别自己的「情绪开关」。' },
     { id: 'dm-lzx2', name: '林知夏', role: '雏翼计划发起人 · 青年人才发展 · 入职 6 年', dims: ['learn', 'innov'], goal: 'learn', slots: '本月剩余 2 个名额', note: '就是她发起了雏翼长青这个平台，想聊「如何设计自己的成长节奏」找她最合适。' }
   ];
+
+  // 首次进入时预填的身份信息（可在页面上继续修改）
+  const DEFAULT_PROFILE = {
+    name: '周予安',
+    dept: '运营',
+    role: '航线运营专员',
+    level: 'P5',
+    joined: '2023-07',
+    mentor: '周亦航',
+    goal: 'lead'
+  };
 
   const freshState = () => ({
     profile: null,
@@ -3575,7 +3588,7 @@ body{
 
     const paras = [
       `你的能力形状更像一把向前倾斜的梯子：${top.name} ${top.value} 明显领先，这让你在陌生课题里能快速站稳。`,
-      `真正限制你的不是能力短板，而是 ${low.name} ${low.value}。当项目进入高压周期，它会影响你持续输出的稳定性。`,
+      `真正卡住你的，是 ${low.name} ${low.value} 这一项。当项目进入高压周期，它会影响你持续输出的稳定性。`,
       `未来 90 天，建议把 60% 的精力放在「${mid.name}」的项目实践上，30% 用于补足${low.name}，剩下 10% 留给复盘。`
     ];
 
@@ -4013,7 +4026,7 @@ body{
     const done = loop.filter(i => i.done);
     paras.push(done.length
       ? `你已经完成成长闭环中的 ${done.length} / ${loop.length} 步：${done.map(i => i.title).join('、')}。这些操作已经变成档案里的 ${archiveEntries().length} 条记录。`
-      : `你还没有开始成长闭环。建议的第一步不是上课，而是先完成测评，让后续的课程与导师推荐有依据。`);
+      : `你还没有开始成长闭环。建议先完成测评，再挑课程，后面的推荐才有依据。`);
 
     paras.push(state.plan.length
       ? `下一步，把《${COURSES.find(c => c.id === state.plan[0].id).title}》放进真实项目里用一次，并请${p.mentor || '一位导师'}帮你复盘。只有被验证的学习，才会变成能力。`
@@ -4040,7 +4053,7 @@ body{
      Feedback
   --------------------------------------------------------- */
   const THEMES = {
-    path: { title: '成长路径清晰度', sug: '和上级把「下一阶段可验证的目标」写成 1–2 条具体结果，而不是抽象的「多锻炼」。' },
+    path: { title: '成长路径清晰度', sug: '和上级把「下一阶段可验证的目标」写成 1–2 条具体结果，别停在「多锻炼」这种说法上。' },
     learn: { title: '学习与成长机会', sug: '在项目排期里先锁定固定的学习时段，避免成长机会被交付节奏挤掉。' },
     feedback: { title: '反馈质量', sug: '把导师对话从「答疑」升级为「项目复盘」，每次带一个真实难题去。' },
     collab: { title: '团队协作支持', sug: '梳理跨部门协作中的接口人与决策链，减少无效往返。' }
@@ -4147,14 +4160,14 @@ body{
         <p class="micro">AI 解读与建议</p>
         <p class="analysis-derived">${esc(
           a.temp >= 75
-            ? `整体体验偏积极（${a.temp}/100）。你最主要的拉扯点在「${a.theme.title}」，它不是情绪问题，而是一个可以被设计解决的机制问题。`
+            ? `整体体验偏积极（${a.temp}/100）。你最主要的拉扯点在「${a.theme.title}」，它更像一个机制问题，可以靠调整流程来解决。`
             : a.temp >= 60
               ? `整体体验中性偏好（${a.temp}/100）。你的成长动力还在，但「${a.theme.title}」正在消耗它。`
               : `整体体验偏紧（${a.temp}/100）。「${a.theme.title}」已经明显影响到你的体验，建议尽快与上级做一次非绩效性质的对话。`
         )}</p>
         <ol><li>${esc(a.theme.sug)}</li>
           <li>${esc(state.assessment ? `把这次反馈与你的测评结果对照：「${topAndLow().low.name}」可能是同一个问题的两种表现。` : '先完成一次职业测评，让反馈与能力数据互相印证。')}</li>
-          <li>下个月复测这四项，看变化而不是看绝对值。</li>
+          <li>下个月复测这四项，重点看变化，不必盯着绝对值。</li>
         </ol>
       </div>
 
@@ -4315,24 +4328,24 @@ body{
 
     if (/测评|维度|结果/.test(text)) {
       return state.assessment
-        ? [`你的测评结果不是标签，而是决定「下一步把力气花在哪」。`, `目前 ${top.name} ${top.value} 领先，${low.name} ${low.value} 靠后。这刚好对应从「做得多」走向「做得深」的阶段任务。`, `要不要我基于这份结果帮你排一个 90 天计划？`]
+        ? [`这份测评结果，用来决定「下一步把力气花在哪」。`, `目前 ${top.name} ${top.value} 领先，${low.name} ${low.value} 靠后。这刚好对应从「做得多」走向「做得深」的阶段任务。`, `要不要我基于这份结果帮你排一个 90 天计划？`]
         : [`你还没有完成正式测评，现在我只能看到起点自评。`, `9 道情境题大概 4 分钟，做完我就能给你更具体的建议。`];
     }
     if (/导师|约|第一次/.test(text)) {
       const m = sortedMentors()[0];
       if (!m) {
-        return [`你还没有录入导师。与其泛泛地找一个「厉害的人」，不如先写下你真正想靠近的那一位。`, `去「导师匹配」添加姓名、擅长维度和你最想学习的东西，我会立刻算出匹配度并生成第一次对话议程。`];
+        return [`你还没有录入导师。先写下你真正想靠近的那一位，比泛泛地找一个「厉害的人」更有用。`, `去「导师匹配」添加姓名、擅长维度和你最想学习的东西，我会立刻算出匹配度并生成第一次对话议程。`];
       }
-      return [`第一次见${m.name}，不要把它开成「请教」，要带一个真实难题去。`, `可以这样开场：「我最近卡在${low.name}上，想请你帮我看看我的判断盲区。」`, `然后聊三件事：你未来 6 个月想改变什么、他看到的跃迁点、下一次复盘的观察指标。`];
+      return [`第一次见${m.name}，带一个真实难题去，比空手请教更有用。`, `可以这样开场：「我最近卡在${low.name}上，想请你帮我看看我的判断盲区。」`, `然后聊三件事：你未来 6 个月想改变什么、他看到的跃迁点、下一次复盘的观察指标。`];
     }
     if (/档案|总结|成长/.test(text)) {
       const entries = archiveEntries().length;
-      return [`你的档案现在有 ${entries} 条记录，最有说服力的不是数量，而是它们能不能连成一条线。`, state.assessment ? `目前这条线是：起点自评 → ${state.assessment.at} 完成测评，${top.name} 领先、${low.name} 待补强。` : `目前还缺一个关键起点：一次正式测评。`, `下一份记录，我建议补上「把一门课用到真实项目里」的证据。`];
+      return [`你的档案现在有 ${entries} 条记录，真正有说服力的，是这些记录能不能连成一条线。`, state.assessment ? `目前这条线是：起点自评 → ${state.assessment.at} 完成测评，${top.name} 领先、${low.name} 待补强。` : `目前还缺一个关键起点：一次正式测评。`, `下一份记录，我建议补上「把一门课用到真实项目里」的证据。`];
     }
     if (/能力|补|短板|提升/.test(text)) {
       return [`从当前数据看，「${low.name}」${low.value} 分是最值得投入的一项。`, `建议三步：先把《${sortedCourses()[0].title}》学完；再在下次项目周会主动承担一次主导；最后请导师给一次具体反馈。`, `要不要我把这三步加进你的成长闭环？`];
     }
-    return [`${name}，我理解你的问题。我们可以把它拆成「能力缺口」和「场景机会」两部分。`, `结合你的数据，最值得投入的是「${low.name}」，而不是再上一门泛泛的课。`, `要不要我帮你从当前项目里找一个可以练手的场景？`];
+    return [`${name}，我理解你的问题。我们可以把它拆成「能力缺口」和「场景机会」两部分。`, `结合你的数据，最值得投入的是「${low.name}」，先别急着再上一门泛泛的课。`, `要不要我帮你从当前项目里找一个可以练手的场景？`];
   }
 
   function openCoach() {
@@ -4459,7 +4472,7 @@ body{
   }
 
   function prefillOb() {
-    const p = state.profile || {};
+    const p = Object.assign({}, DEFAULT_PROFILE, state.profile || {});
     $('#obName').value = p.name || '';
     if (p.dept) $('#obDept').value = p.dept;
     $('#obRole').value = p.role || '';
